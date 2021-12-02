@@ -5,11 +5,12 @@ This is an AndroidStudio rebuild of google SDK sample NotePad
 ![Image text](https://raw.githubusercontent.com/cqm123456/NotePad/master/images/Newclass.jpg)
 
 • MyCursorAdapter.java
-public void bindView(View view, Context context, Cursor cursor){
+
+        public void bindView(View view, Context context, Cursor cursor){
         super.bindView(view, context, cursor);
         //从数据库中读取的cursor中获取笔记列表对应的颜色数据，并设置笔记颜色
-        int x = cursor.getInt(cursor.getColumnIndex(NotePad.Notes.COLUMN_NAME_BACK_COLOR));
-
+        int x =               
+       cursor.getInt(cursor.getColumnIndex(NotePad.Notes.COLUMN_NAME_BACK_COLOR));
         switch (x){
             case NotePad.Notes.DEFAULT_COLOR:
                 view.setBackgroundColor(Color.rgb(255, 255, 255));
@@ -32,23 +33,9 @@ public void bindView(View view, Context context, Cursor cursor){
         }
     }
 
-• NoteColor.java
-public void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.note_color);
-    mUri = getIntent().getData();
-    mCursor = managedQuery(
-            mUri,        // The URI for the note that is to be retrieved.
-            PROJECTION,  // The columns to retrieve
-            null,        // No selection criteria are used, so no where columns are needed.
-            null,        // No where columns are used, so no where values are needed.
-            null         // No sort order is needed.
-        );
-}
-
 • NoteSearch.java
-@Override
-    protected void onCreate(Bundle savedInstanceState) {
+
+        protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.note_search_list);
         Intent intent = getIntent();
@@ -60,7 +47,8 @@ public void onCreate(Bundle savedInstanceState) {
     }
     
 • OutputText.java
-private void write()
+
+        private void write()
     {
         try
         {
@@ -81,14 +69,10 @@ private void write()
                 Toast.makeText(this, "保存成功,保存位置：" + sdCardDir.getCanonicalPath() + "/" + mName.getText() + ".txt", Toast.LENGTH_LONG).show();
             }
         }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-        }
-    }
     
 • NoteEditor.java
     设置颜色
+    
     switch (x){
                 case NotePad.Notes.DEFAULT_COLOR:
                     mText.setBackgroundColor(Color.rgb(255, 255, 255));
@@ -112,7 +96,8 @@ private void write()
             
 • NotePad.java
     设置颜色
-    public static final int DEFAULT_COLOR = 0; //白
+    
+        public static final int DEFAULT_COLOR = 0; //白
         public static final int YELLOW_COLOR = 1;//黄
         public static final int BLUE_COLOR = 2;//蓝
         public static final int GREEN_COLOR = 3;//绿
@@ -120,8 +105,9 @@ private void write()
         
 • NotesList.java
     设置搜索，排序
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
+
+        @Override
+        public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_add:
           /*
@@ -139,7 +125,6 @@ private void write()
            */
                 startActivity(new Intent(Intent.ACTION_PASTE, getIntent().getData()));
                 return true;
-
             //添加搜素
             case R.id.menu_search:
                 Intent intent = new Intent();
