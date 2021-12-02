@@ -31,9 +31,9 @@ This is an AndroidStudio rebuild of google SDK sample NotePad
 • 更改记事本的背景
 需要在笔记中设置，在笔记初始展示页以带背景颜色的横条表示
 
-![Image text](https://raw.githubusercontent.com/cqm123456/NotePad/master/images/backgroundreplacement1.jpg)
+![Image text](https://raw.githubusercontent.com/cqm123456/NotePad/master/images/Backgroundreplacement1.jpg)
 
-![Image text](https://raw.githubusercontent.com/cqm123456/NotePad/master/images/backgroundreplacement2.jpg)
+![Image text](https://raw.githubusercontent.com/cqm123456/NotePad/master/images/Backgroundreplacement2.jpg)
 
 • 导出笔记
 
@@ -46,6 +46,6 @@ This is an AndroidStudio rebuild of google SDK sample NotePad
 
 ![Image text](https://raw.githubusercontent.com/cqm123456/NotePad/master/images/Createtimesort.jpg)
 
-![Image text](https://raw.githubusercontent.com/cqm123456/NotePad/master/images/ModifytimeSort.jpg)
+![Image text](https://raw.githubusercontent.com/cqm123456/NotePad/master/images/Modifytimesort.jpg)
 
 ![Image text](https://raw.githubusercontent.com/cqm123456/NotePad/master/images/Colorsorting.jpg)
